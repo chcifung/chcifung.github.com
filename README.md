@@ -1,2 +1,2 @@
 # master
-This is my first personal Bology
+This is my first personal Blog.
