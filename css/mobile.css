@@ -1,0 +1,38 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background: #111ace;
+}
+
+.sidebar{
+	position: relative;
+	width: 100%;
+	float: none;
+}
+
+.main{
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.article-list{
+	margin: 0;
+}
+
+.sidebar .nav,
+.sidebar .tag-list{
+	text-align: center;
+	display: none;
+}
+
+#menu-checkbox:checked ~ .nav,
+#menu-checkbox:checked ~ .tag-list{
+	display: block;
+}
+
+#menu-checkbox{
+	display: none;
+}
