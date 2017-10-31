@@ -141,3 +141,14 @@ img{
 .container-small{
 	max-width: 500px;
 }
+
+#toggle-checkbox:checked ~div{
+	display: block!important;
+}
+
+.toggle-label{
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
