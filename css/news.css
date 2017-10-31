@@ -137,3 +137,7 @@ img{
 	text-align: center;
 	color: #999;
 }
+
+.container-small{
+	max-width: 500px;
+}
