@@ -6,10 +6,16 @@
 */
 $(function(){
 	'use strict';
-	var validator =  new Validator(' rr',{
-		maxlength: 5
+
+	var test = new Input("#test");
+	var valid = test.validator.is_valid();
+	console.log(valid);
+	/*
+	var validator =  new Validator('r r',{
+		pattern: '^[a-zA-Z0-9]+$',
 	});
 
-	var result = validator.validate_required();
+	var result = validator.validate_pattern();
 	console.log(result);
-})
+	*/
+});
