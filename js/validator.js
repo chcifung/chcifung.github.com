@@ -3,6 +3,29 @@ $(function(){
 	window.Validator = function(val,rule){
 
 		/*用于完成this.validate_max或者this.validate_min的前置处理工作*/
+		this.is_valid = function(new_val){
+			var key;
+			val = new_val||val;
+
+			/*如果不是必填项且用户未填写任何内容则直接判定为合法*/
+			if(!rule.required&&!val){
+				return true;
+			}
+
+			for(key in rule){
+				/*防止重复检查*/
+				if(key === "required"){
+					continue;
+				}
+				/*调用rule中相对应的方法*/
+				var r =	this['validate_'+key]();
+				if(!r){
+					return false;
+				}
+			}
+			return true;
+		}
+		
 		function pre_max_min(){
 			val = parseFloat(val);
 		}

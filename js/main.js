@@ -7,10 +7,22 @@
 $(function(){
 	'use strict';
 
+	var $inputs = $('[data-rule');
+	var inputs = [];
+
+	$inputs.each(function(index,node){
+		var tmp = new Input(node);
+		inputs.push(tmp);
+		
+	});
+
+	console.log(inputs);
+
+	/*
 	var test = new Input("#test");
 	var valid = test.validator.is_valid();
 	console.log(valid);
-	/*
+	
 	var validator =  new Validator('r r',{
 		pattern: '^[a-zA-Z0-9]+$',
 	});
