@@ -9,24 +9,24 @@
 <body>
 	<div class="wrap wrap-sm">
 		<div class="header">
-			<h1>Yos</h1>
+			<h1>账号注册</h1>
 		</div>
 		<div class="form">
-			<form>
+			<form id="signup">
 				<div class="input-wrap">
 					<label>姓名</label>
 					<input id="" type="text" data-rule="maxlength:5|minlength:1" class="input-control" name="name">
-					<div id="name-input-error" class="input-error">姓名格式有误</div>
+					<div id="name-input-error" class="input-error">姓名格式有误,最多五个字哦</div>
 				</div>
 				<div class="input-wrap">
 					<label>年龄</label>
 					<input id="" type="text" data-rule="max:99|min:18" class="input-control" name="age">
-					<div id="age-input-error" class="input-error">年纪格式有误</div>
+					<div id="age-input-error" class="input-error">年纪不合适哦</div>
 				</div>
 				<div class="input-wrap">
 					<label>用户名</label>
-					<input id="" type="text" data-rule="pattern:'^[a-zA-Z0-9]+$'|maxlength:18|minlength:4" class="input-control" name="username">
-					<div id="username-input-error" class="input-error">用户名格式有误</div>
+					<input id="" type="text" data-rule="pattern:^[a-zA-Z0-9]+$|maxlength:18|minlength:4" class="input-control" name="username">
+					<div id="username-input-error" class="input-error">用户名格式有误，最低4位，最长18位</div>
 				</div>
 				<div class="input-wrap">
 					<label>自我介绍</label>
@@ -36,9 +36,9 @@
 				<div class="input-wrap">
 					<label>密码</label>
 					<input id="" type="password" data-rule="maxlength:24|minlength:6" class="input-control" name="password">
-					<div id="password-input-error" class="input-error">密码格式有误</div>
+					<div id="password-input-error" class="input-error">密码格式有误,最短6位</div>
 				</div>
-				<button type="submit">提交注册</button>
+				<button class="button-control" type="submit">注册</button>
 			</form>
 		</div>
 	</div>

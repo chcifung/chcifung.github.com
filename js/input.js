@@ -10,7 +10,7 @@ $(function(){
 
 		
 
-		me.load_validator = function(){
+		this.load_validator = function(){
 			var val = this.get_val();
 			this.validator = new Validator(val,rule);
 		}
@@ -29,7 +29,7 @@ $(function(){
 
 		function listen(){
 			$ele.on('blur',function(){
-				var valid = me.validator.is_valid();
+				var valid = me.validator.is_valid(me.get_val());
 				if(valid){
 					$error_ele.hide();
 				}else{
